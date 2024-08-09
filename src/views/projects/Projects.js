@@ -37,23 +37,22 @@ export const Projects = () => (
       </div>
       {Object.values(PROJECTS).map((project, index) => {
         return (
-          <div
+          <NavLink
             key={project.id}
             className={index % 2 == 0 ? 'project' : 'project reversed'}
+            to={project.id}
           >
             <div>
               <img src={project.banner} />
             </div>
             <div>
               <span className="course">{project.course}</span>
-              <NavLink to={project.id}>
-                <h2 className="name">
-                  {index + 1}. {project.displayName}
-                </h2>
-              </NavLink>
+              <h2 className="name">
+                {index + 1}. {project.displayName}
+              </h2>
               <h2 className="details">{project.description}</h2>
             </div>
-          </div>
+          </NavLink>
         );
       })}
     </div>

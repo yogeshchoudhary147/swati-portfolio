@@ -191,6 +191,7 @@ body {
       align-items: center;
       margin-top: 24px;
       padding: 48px;
+      color: #000;
       border-bottom: 1px solid rgb(199, 199, 199);
       &.reversed {
         flex-direction: row-reverse;
@@ -209,7 +210,6 @@ body {
         font-family: PoppinsSemibold;
         font-size: 30px;
         margin-bottom: 8px;
-        color: #000;
       }
       .details {
         font-family: PoppinsExtraLight;
