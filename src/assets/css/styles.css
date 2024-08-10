@@ -140,6 +140,57 @@ body {
       }
     }
   }
+  .about-container {
+    .background-container {
+      height: 300px !important;
+      width: 100% !important;
+      top: 108px;
+    }
+    .main-container {
+      flex-wrap: wrap !important;
+      padding-top: 16px !important;
+      .profile {
+        width: 100%;
+        .info {
+          width: auto;
+          padding: 32px 0px 26px 0px;
+          img {
+            width: 120px;
+            height: 120px;
+          }
+          .name {
+            margin-top: 20px;
+            h2 {
+              font-size: 21px;
+            }
+          }
+          .blue-bar {
+            margin-top: 16px;
+          }
+          span {
+            font-size: 16px;
+            letter-spacing: 2.25px;
+            margin-top: 16px;
+          }
+        }
+      }
+      .details {
+        margin: 0px 16px;
+        h1 {
+          font-size: 60px;
+        }
+        h3 {
+          font-size: 20px;
+        }
+        .buttons {
+          margin: 32px 0px;
+        }
+        p {
+          font-size: 16px;
+        }
+      }
+    }
+  }
 }
 
 .footer {
@@ -166,7 +217,7 @@ body {
   background-color: rgb(230, 218, 206);
   .main-container {
     width: 90%;
-    max-width: 724px;
+    max-width: 768px;
     margin: 0px auto;
     padding-bottom: 64px;
     .heading {
@@ -217,12 +268,9 @@ body {
   padding-top: 96px;
   .main-container {
     width: 90%;
-    max-width: 724px;
+    max-width: 768px;
     margin: 0px auto;
     padding-bottom: 64px;
-    /* width: 980px; */
-    /* margin: 0px auto; */
-    /* padding-bottom: 64px; */
     .heading {
       background-color: white;
       padding: 80px 192px 80px 128px;
@@ -281,10 +329,12 @@ body {
     z-index: -1;
   }
   .main-container {
-    width: 850px;
+    width: 90%;
+    max-width: 768px;
     margin: 0px auto;
     display: flex;
     padding: 72px 0px 56px 0px;
+    gap: 40px;
   }
   .profile {
     box-shadow: rgba(138, 131, 124, 0.23) -11.31px 11.31px 17px 0px;
@@ -340,7 +390,6 @@ body {
   }
 
   .details {
-    padding-left: 40px;
     h1 {
       font-family: PoppinsSemibold;
       font-size: 100px;
