@@ -1,7 +1,16 @@
 import React from 'react';
-import { NavLink, useResolvedPath } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import { NavLink, useLocation } from 'react-router-dom';
+import Hamburger from 'hamburger-react';
 
 export default function Header() {
+  const [isOpen, setOpen] = useState(false);
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    setOpen(false); // Close the navigation panel
+  }, [pathname]);
+
   return (
     <div className="header">
       <div className="info">
@@ -10,6 +19,22 @@ export default function Header() {
           <span className="seperator">&nbsp;/&nbsp;</span>
           SENIOR DESIGN MANAGER
         </NavLink>
+      </div>
+      <Hamburger toggled={isOpen} toggle={setOpen} size={20} />
+      <div className={isOpen ? 'menu-container visible' : 'menu-container'}>
+        <nav>
+          <ul>
+            <li>
+              <NavLink to="">ABOUT ME</NavLink>
+            </li>
+            <li>
+              <NavLink to="resume">RESUME</NavLink>
+            </li>
+            <li>
+              <NavLink to="projects">PROJECTS</NavLink>
+            </li>
+          </ul>
+        </nav>
       </div>
       <div className="nav">
         <nav>
