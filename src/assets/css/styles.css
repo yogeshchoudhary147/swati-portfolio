@@ -441,13 +441,14 @@ body {
 .general-container {
   background: rgb(230, 218, 206);
   .main-container {
-    margin: 0px auto;
+    max-width: 768px;
     min-height: 600px;
+    margin: 0px auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 980px;
+    padding: 0px 40px;
   }
 }
 
