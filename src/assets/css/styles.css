@@ -98,6 +98,12 @@ body {
   }
 }
 
+@media only screen and (max-width: 768px) {
+  .footer {
+    column-gap: 0px !important;
+  }
+}
+
 .footer {
   background-color: white;
   display: flex;
@@ -110,6 +116,8 @@ body {
     flex-direction: column;
     align-items: center;
     row-gap: 8px;
+    padding: 0px 8px;
+    word-break: break-all;
     h4 {
       font-family: AvenirHeavy;
     }
@@ -119,7 +127,8 @@ body {
 .resume-container {
   background-color: rgb(230, 218, 206);
   .main-container {
-    width: 724px;
+    width: 90%;
+    max-width: 724px;
     margin: 0px auto;
     padding-bottom: 64px;
     .heading {
@@ -133,14 +142,23 @@ body {
       font-family: PoppinsSemibold;
       margin-top: 108px;
     }
+    @media only screen and (max-width: 768px) {
+      .card {
+        flex-wrap: wrap;
+        .duration {
+          flex-shrink: unset !important;
+        }
+      }
+    }
     .card {
       padding: 50px 40px 50px 50px;
       display: flex;
       flex-direction: row;
       margin-top: 32px;
       font-size: 16px;
+      row-gap: 32px;
+      column-gap: 48px;
       .duration {
-        width: 224px;
         flex-shrink: 0;
         font-size: 14px;
         .blue-text {
