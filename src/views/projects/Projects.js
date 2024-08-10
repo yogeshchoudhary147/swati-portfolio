@@ -37,14 +37,8 @@ export const Projects = () => (
       </div>
       {Object.values(PROJECTS).map((project, index) => {
         return (
-          <NavLink
-            key={project.id}
-            className={index % 2 == 0 ? 'project' : 'project reversed'}
-            to={project.id}
-          >
-            <div>
-              <img src={project.banner} />
-            </div>
+          <NavLink key={project.id} className={'project'} to={project.id}>
+            <img src={project.banner} />
             <div>
               <span className="course">{project.course}</span>
               <h2 className="name">

@@ -191,6 +191,31 @@ body {
       }
     }
   }
+  .projects-container {
+    padding-top: 72px !important;
+    .main-container {
+      .heading {
+        padding: 32px 24px !important;
+        h1 {
+          font-size: 32px !important;
+        }
+      }
+      .project {
+        padding: 24px !important;
+        flex-wrap: wrap;
+        gap: 16px !important;
+        img {
+          width: 100% !important;
+        }
+        .name {
+          font-size: 20px !important;
+        }
+        .details {
+          font-size: 15px !important;
+        }
+      }
+    }
+  }
 }
 
 .footer {
@@ -209,6 +234,9 @@ body {
     word-break: break-all;
     h4 {
       font-family: AvenirHeavy;
+    }
+    a {
+      color: #000;
     }
   }
 }
@@ -267,14 +295,13 @@ body {
   background-size: 100% 464px;
   padding-top: 96px;
   .main-container {
-    width: 90%;
+    width: 100%;
     max-width: 768px;
     margin: 0px auto;
     padding-bottom: 64px;
+    background-color: white;
     .heading {
-      background-color: white;
-      padding: 80px 192px 80px 128px;
-      box-sizing: border-box;
+      padding: 80px 140px 60px 120px;
       h1 {
         font-family: PoppinsSemibold;
         font-size: 56px;
@@ -289,10 +316,10 @@ body {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-top: 24px;
-      padding: 48px;
+      padding: 48px 0px;
       color: #000;
       border-bottom: 1px solid rgb(199, 199, 199);
+      gap: 48px;
       &.reversed {
         flex-direction: row-reverse;
       }
