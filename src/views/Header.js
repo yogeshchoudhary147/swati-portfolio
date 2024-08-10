@@ -11,6 +11,16 @@ export default function Header() {
     setOpen(false);
   }, [pathname]);
 
+  useEffect(() => {
+    if (typeof window != 'undefined' && window.document) {
+      if (isOpen) {
+        document.body.style.overflow = 'hidden';
+      } else {
+        document.body.style.overflow = 'unset';
+      }
+    }
+  }, [isOpen]);
+
   return (
     <div className="header">
       <div className="info">
@@ -24,7 +34,7 @@ export default function Header() {
         color={!isOpen ? '#0050FF' : '#000'}
         toggled={isOpen}
         toggle={setOpen}
-        size={24}
+        size={30}
         rounded
       />
       <div className={isOpen ? 'menu-container visible' : 'menu-container'}>
