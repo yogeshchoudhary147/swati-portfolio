@@ -10,7 +10,6 @@ export const Resume = () => (
           <h3 className="blue-text">2018-2023</h3>
           <span>Senior Design Manager</span>
           <br />
-          <br />
           <span>Cult.fit Pvt. Ltd.</span>
           <br />
           <span>Bengaluru</span>
@@ -47,7 +46,6 @@ export const Resume = () => (
           <h3 className="blue-text">2017-2018</h3>
           <span>Assistant Manager - CX & Merchandising</span>
           <br />
-          <br />
           <span>Cleartrip Pvt. Ltd.</span>
           <br />
           <span>Bengaluru</span>
@@ -74,7 +72,6 @@ export const Resume = () => (
         <div className="duration">
           <h3 className="blue-text">2014-2017</h3>
           <span>Site Merchandiser - Fashion Marketing</span>
-          <br />
           <br />
           <span>Flipkart Pvt. Ltd.</span>
           <br />
@@ -106,7 +103,6 @@ export const Resume = () => (
           <h3 className="blue-text">2011-2012</h3>
           <span>Audit Assistant - AERS</span>
           <br />
-          <br />
           <span>Deloitte & Touche</span>
           <br />
           <span>Hyderabad</span>
@@ -134,7 +130,6 @@ export const Resume = () => (
           <h3 className="blue-text">2008-2011</h3>
           <span>University of Delhi</span>
           <br />
-          <br />
           <span>B.com (Honors)</span>
           <br />
           <span>Ramjas College, Delhi</span>
@@ -157,7 +152,6 @@ export const Resume = () => (
         <div className="duration">
           <h3 className="blue-text">1998-2008</h3>
           <span>Delhi Public School</span>
-          <br />
           <br />
           <span>Schooling</span>
           <br />

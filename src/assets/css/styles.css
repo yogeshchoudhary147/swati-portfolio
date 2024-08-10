@@ -167,14 +167,25 @@ body {
     .main-container {
       .heading {
         padding-top: 54px !important;
+        font-size: 28px !important;
       }
       .sub-heading {
         margin-top: 54px !important;
+        font-size: 20px !important;
       }
       .card {
         flex-wrap: wrap;
+        margin-top: 24px !important;
+        padding: 24px 20px 24px 24px !important;
         .duration {
           flex-shrink: unset !important;
+          width: auto !important;
+          .blue-text {
+            font-size: 18px !important;
+          }
+          span:first-of-type {
+            font-size: 16px !important;
+          }
         }
         ul {
           padding-left: 20px;
@@ -307,19 +318,21 @@ body {
       flex-direction: row;
       margin-top: 32px;
       font-size: 16px;
-      row-gap: 32px;
+      row-gap: 24px;
       column-gap: 48px;
       .duration {
         flex-shrink: 0;
         font-size: 14px;
+        width: 30%;
         .blue-text {
           color: var(--primary);
-          margin-bottom: 6px;
           font-family: PoppinsSemibold;
           font-size: 20px;
         }
         span:first-of-type {
-          font-size: 17px !important;
+          font-size: 17px;
+          margin: 12px 0px;
+          display: inline-block;
         }
       }
       ul {
