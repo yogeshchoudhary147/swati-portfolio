@@ -7,7 +7,8 @@ export default function Header() {
       <div className="info">
         <NavLink to="">
           <span className="name">Swati Parmar</span>
-          &nbsp;/&nbsp; SENIOR DESIGN MANAGER
+          <span className="seperator">&nbsp;/&nbsp;</span>
+          SENIOR DESIGN MANAGER
         </NavLink>
       </div>
       <div className="nav">
