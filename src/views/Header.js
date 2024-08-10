@@ -8,7 +8,7 @@ export default function Header() {
   const { pathname } = useLocation();
 
   useEffect(() => {
-    setOpen(false); // Close the navigation panel
+    setOpen(false);
   }, [pathname]);
 
   return (
@@ -20,7 +20,13 @@ export default function Header() {
           SENIOR DESIGN MANAGER
         </NavLink>
       </div>
-      <Hamburger toggled={isOpen} toggle={setOpen} size={20} />
+      <Hamburger
+        color={!isOpen ? '#0050FF' : '#000'}
+        toggled={isOpen}
+        toggle={setOpen}
+        size={24}
+        rounded
+      />
       <div className={isOpen ? 'menu-container visible' : 'menu-container'}>
         <nav>
           <ul>
