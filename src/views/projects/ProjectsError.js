@@ -11,7 +11,7 @@ export default function ProjectsError() {
         <br />
         <p>{error.message}</p>
         <br />
-        <Link to="/projects">Back to the projects page</Link>
+        <Link to="/projects">&larr; Back to the projects page</Link>
       </div>
     </div>
   );

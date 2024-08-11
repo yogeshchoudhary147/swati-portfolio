@@ -5,14 +5,11 @@ export default function NotFound() {
   return (
     <div className="general-container">
       <div className="main-container">
-        <h1>404 - Page not found!</h1>
+        <h1>404</h1>
         <br />
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat.
-        </p>
+        <h3 style={{ color: 'darkgray' }}>Page not found</h3>
+        <br />
+        <p>The page you are looking for doesn't exist or has been moved.</p>
         <br />
         <p>
           Go to the <Link to="/">Homepage</Link>.

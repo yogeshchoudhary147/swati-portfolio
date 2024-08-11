@@ -260,8 +260,13 @@ body {
         img {
           width: 100% !important;
         }
+        .course {
+          font-size: 14px !important;
+          line-height: 24px !important;
+        }
         .name {
           font-size: 20px !important;
+          margin-bottom: 4px !important;
         }
         .details {
           font-size: 15px !important;
@@ -378,12 +383,8 @@ body {
       color: #000;
       border-bottom: 1px solid rgb(199, 199, 199);
       gap: 48px;
-      &.reversed {
-        flex-direction: row-reverse;
-      }
       img {
-        width: 439px;
-        height: 335px;
+        width: 420px;
         object-fit: cover;
       }
       .course {
@@ -500,13 +501,16 @@ body {
   background: rgb(230, 218, 206);
   .main-container {
     max-width: 768px;
-    min-height: 600px;
     margin: 0px auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 0px 40px;
+    padding: 120px 40px;
+    text-align: center;
+    a {
+      color: var(--primary);
+    }
   }
 }
 
