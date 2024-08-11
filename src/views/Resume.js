@@ -2,10 +2,7 @@ import React from 'react';
 import FileSaver from 'file-saver';
 
 const saveFile = () => {
-  FileSaver.saveAs(
-    process.env.API_URL + '/resources/cv.pdf',
-    'Swati_Parmar_CV.pdf',
-  );
+  FileSaver.saveAs('/resources/cv.pdf', 'Swati_Parmar_CV.pdf');
 };
 
 export const Resume = () => (
