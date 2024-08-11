@@ -1,10 +1,23 @@
 import React from 'react';
+import FileSaver from 'file-saver';
+
+const saveFile = () => {
+  FileSaver.saveAs(
+    process.env.API_URL + '/resources/cv.pdf',
+    'Swati_Parmar_CV.pdf',
+  );
+};
 
 export const Resume = () => (
   <div className="resume-container">
     <div className="main-container">
       <h1 className="heading">Resume</h1>
-      <h2 className="sub-heading">Experience</h2>
+      <div className="sub-heading-container">
+        <h2 className="sub-heading">Experience</h2>
+        <button className="button blue-button" onClick={saveFile}>
+          DOWNLOAD CV
+        </button>
+      </div>
       <div className="card">
         <div className="duration">
           <h3 className="blue-text">2018-2023</h3>
@@ -124,7 +137,9 @@ export const Resume = () => (
           </ul>
         </div>
       </div>
-      <h2 className="sub-heading">Education</h2>
+      <div className="sub-heading-container">
+        <h2 className="sub-heading">Education</h2>
+      </div>
       <div className="card">
         <div className="duration">
           <h3 className="blue-text">2008-2011</h3>
