@@ -11,7 +11,7 @@ export const Resume = () => (
           className="button blue-button"
           href={PdfFile}
           target="_blank"
-          download
+          download="Swati_Parmar_CV.pdf"
         >
           DOWNLOAD CV
         </a>
