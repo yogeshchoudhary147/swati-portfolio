@@ -70,6 +70,7 @@ body {
   background-color: white;
   display: flex;
   justify-content: space-between;
+  column-gap: 48px;
   padding: 24px 72px;
   align-items: center;
   position: -webkit-sticky;
@@ -77,12 +78,10 @@ body {
   z-index: 1;
   .info {
     font-size: 17px;
+    color: black;
     .name {
       font-family: PoppinsSemibold;
       font-size: 25px;
-    }
-    a {
-      color: black;
     }
   }
   .hamburger-react {
@@ -104,26 +103,21 @@ body {
     }
     nav ul {
       padding: 0px;
-      display: flex;
       flex-direction: column;
       row-gap: 28px;
       margin-top: 132px;
-      align-items: center;
       a {
         font-size: 20px;
         font-family: PoppinsSemibold;
-        color: black;
-        &:hover,
-        &.active {
-          color: var(--primary);
-        }
       }
     }
   }
   nav ul {
     display: flex;
+    align-items: center;
     column-gap: 16px;
     li {
+      flex-shrink: 0;
       a {
         font-size: 14px;
         color: black;
@@ -142,7 +136,6 @@ body {
     padding: 24px 20px;
     .info {
       font-size: 14px;
-      word-break: break-word;
       .name {
         font-size: 20px;
       }

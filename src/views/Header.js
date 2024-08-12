@@ -23,13 +23,11 @@ export default function Header() {
 
   return (
     <div className="header">
-      <div className="info">
-        <NavLink to="">
-          <span className="name">Swati Parmar</span>
-          <span className="seperator">&nbsp;/&nbsp;</span>
-          SENIOR DESIGN MANAGER
-        </NavLink>
-      </div>
+      <NavLink to="" className="info">
+        <span className="name">Swati Parmar</span>
+        <span className="seperator">&nbsp;/&nbsp;</span>
+        SENIOR DESIGN MANAGER
+      </NavLink>
       <Hamburger
         color={!isOpen ? '#0050FF' : '#000'}
         toggled={isOpen}
