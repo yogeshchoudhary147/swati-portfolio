@@ -1,6 +1,6 @@
 import React from 'react';
 import FileSaver from 'file-saver';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const saveFile = () => {
   FileSaver.saveAs('/resources/cv.pdf', 'Swati_Parmar_CV.pdf');
@@ -12,9 +12,9 @@ export const Resume = () => (
       <h1 className="heading">Resume</h1>
       <div className="sub-heading-container">
         <h2 className="sub-heading">Experience</h2>
-        <Link to="/resources/cv.pdf" target="_blank" download>
+        <NavLink to="/resources/cv.pdf" target="_blank" download="My_File.pdf">
           Download
-        </Link>
+        </NavLink>
         <button className="button blue-button" onClick={saveFile}>
           DOWNLOAD CV
         </button>
