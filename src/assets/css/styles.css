@@ -233,7 +233,7 @@ body {
       .details {
         margin: 0px 16px;
         h1 {
-          font-size: 60px;
+          font-size: 50px;
         }
         h3 {
           font-size: 20px;
@@ -257,9 +257,10 @@ body {
         }
       }
       .project {
-        padding: 24px !important;
+        padding: 32px 0px !important;
         flex-wrap: wrap;
         gap: 16px !important;
+        margin: 0px 24px;
         img {
           width: 100% !important;
         }
@@ -428,7 +429,7 @@ body {
     margin: 0px auto;
     display: flex;
     padding: 72px 0px 56px 0px;
-    gap: 40px;
+    gap: 60px;
   }
   .profile {
     box-shadow: rgba(138, 131, 124, 0.23) -11.31px 11.31px 17px 0px;
@@ -478,6 +479,7 @@ body {
     justify-content: center;
     column-gap: 32px;
     padding: 16px;
+    align-items: center;
     a {
       text-decoration: none;
     }

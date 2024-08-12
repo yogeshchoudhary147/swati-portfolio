@@ -34,7 +34,7 @@ export default function Header() {
         color={!isOpen ? '#0050FF' : '#000'}
         toggled={isOpen}
         toggle={setOpen}
-        size={30}
+        size={24}
         rounded
       />
       <div className={isOpen ? 'menu-container visible' : 'menu-container'}>

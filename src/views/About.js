@@ -24,7 +24,7 @@ export const About = () => (
           <a href="https://www.facebook.com/swati.parmar.10" target="_blank">
             <FontAwesomeIcon
               icon={faFacebookF}
-              style={{ fontSize: '18px', color: 'black' }}
+              style={{ fontSize: '22px', color: 'black' }}
             />
           </a>
           <a
@@ -33,13 +33,13 @@ export const About = () => (
           >
             <FontAwesomeIcon
               icon={faLinkedinIn}
-              style={{ fontSize: '20px', color: 'black' }}
+              style={{ fontSize: '24px', color: 'black' }}
             />
           </a>
           <a href="https://www.instagram.com/iam.swatiparmar" target="_blank">
             <FontAwesomeIcon
               icon={faInstagram}
-              style={{ fontSize: '20px', color: 'black' }}
+              style={{ fontSize: '24px', color: 'black' }}
             />
           </a>
         </div>
