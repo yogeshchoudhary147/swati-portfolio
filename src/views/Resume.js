@@ -12,11 +12,14 @@ export const Resume = () => (
       <h1 className="heading">Resume</h1>
       <div className="sub-heading-container">
         <h2 className="sub-heading">Experience</h2>
-        <NavLink to="/resources/cv.pdf" target="_blank" download="My_File.pdf">
-          Download
+        <NavLink to="/resources/cv.pdf" target="_blank" download="MY_CV.pdf">
+          Download 1
         </NavLink>
+        <a href="/resources/cv.pdf" target="_blank" download="MY_CV.pdf">
+          Download 2
+        </a>
         <button className="button blue-button" onClick={saveFile}>
-          DOWNLOAD CV
+          DOWNLOAD 3
         </button>
       </div>
       <div className="card">
