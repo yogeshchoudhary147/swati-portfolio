@@ -1,15 +1,5 @@
 import React from 'react';
-import FileSaver from 'file-saver';
-import { NavLink } from 'react-router-dom';
 import PdfFile from '../../src/cv.pdf';
-
-const saveFile = () => {
-  FileSaver.saveAs('/resources/cv.pdf', 'Swati_Parmar_CV.pdf');
-};
-
-const onResumeClick = () => {
-  window.open(PdfFile);
-};
 
 export const Resume = () => (
   <div className="resume-container">
@@ -17,16 +7,14 @@ export const Resume = () => (
       <h1 className="heading">Resume</h1>
       <div className="sub-heading-container">
         <h2 className="sub-heading">Experience</h2>
-        <NavLink to="PdfFile" target="_blank" download="MY_CV.pdf">
-          Download 1
-        </NavLink>
-        <a onClick={onResumeClick}>Download 2</a>
-        <a href={PdfFile} target="_blank" download>
-          Download 3
+        <a
+          className="button blue-button"
+          href={PdfFile}
+          target="_blank"
+          download
+        >
+          DOWNLOAD CV
         </a>
-        <button className="button blue-button" onClick={saveFile}>
-          DOWNLOAD 4
-        </button>
       </div>
       <div className="card">
         <div className="duration">
