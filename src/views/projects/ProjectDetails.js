@@ -12,22 +12,17 @@ export default function ProjectDetails() {
         {project.content ? (
           project.content.map((item, index) => {
             return (
-              <div className="slider-container" style={{ width: '100%' }}>
+              <div className="slider-container">
                 <Swiper
-                  key={'something-swiper-' + index}
+                  key={'swiper-' + index}
                   modules={[Navigation]}
                   navigation
                 >
                   {item ? (
                     item.map((banner) => {
                       return (
-                        <SwiperSlide
-                          key={'something-swiper-slide-' + index + banner}
-                        >
-                          <img
-                            src={banner}
-                            style={{ width: '100%', display: 'block' }}
-                          />
+                        <SwiperSlide key={'swiper-slide-' + index}>
+                          <img src={banner} />
                         </SwiperSlide>
                       );
                     })
@@ -39,20 +34,17 @@ export default function ProjectDetails() {
             );
           })
         ) : (
-          <>
+          <div className="coming-up-container">
+            <h1>Coming Soon!!</h1>
             <br />
             <br />
+            <img width={'100%'} src={project.banner} />
             <br />
             <br />
-            <img width={300} src={project.banner} />
-            <br />
-            <h1>{project.displayName} Coming Soon!!</h1>
+            <h2>{project.displayName}</h2>
             <br />
             <p>{project.description}</p>
-            <br />
-            <br />
-            <br />
-          </>
+          </div>
         )}
       </div>
     </div>

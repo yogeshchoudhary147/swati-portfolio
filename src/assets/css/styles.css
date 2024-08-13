@@ -75,7 +75,8 @@ body {
   align-items: center;
   position: -webkit-sticky;
   position: sticky;
-  z-index: 1;
+  top: 0px;
+  z-index: 2;
   .info {
     font-size: 17px;
     color: black;
@@ -528,6 +529,20 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
+    .slider-container {
+      width: 100%;
+      img {
+        width: 100%;
+        display: block;
+      }
+    }
+    .coming-up-container {
+      padding: 50px 40px 100px 40px;
+      img {
+        width: 100%;
+        max-width: 300px;
+      }
+    }
   }
 }
 
