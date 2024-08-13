@@ -1,6 +1,7 @@
 import React from 'react';
 import feastly_pic from '../../assets/images/feastly.jpeg';
 import learnify_pic from '../../assets/images/learnify.jpeg';
+import reflect_pic from '../../assets/images/reflect.jpeg';
 import bg from '../../assets/images/bg.jpeg';
 import { NavLink } from 'react-router-dom';
 
@@ -18,6 +19,13 @@ export const PROJECTS = [
     course: 'Google UX Design Project (Coursera)',
     description: 'An online learning website',
     banner: learnify_pic,
+  },
+  {
+    id: 'reflect',
+    displayName: 'Reflect',
+    course: 'Google UX Design Project (Coursera)',
+    description: 'App & website for daily rituals for a better lifestyle',
+    banner: reflect_pic,
   },
 ];
 
