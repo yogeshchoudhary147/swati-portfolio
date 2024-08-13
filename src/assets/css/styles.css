@@ -517,6 +517,20 @@ body {
   }
 }
 
+.project-container {
+  background-color: rgb(230, 218, 206);
+  .main-container {
+    background-color: rgb(230, 218, 206);
+    max-width: 768px;
+    margin: 0px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+}
+
 /* CSS */
 .button {
   appearance: none;

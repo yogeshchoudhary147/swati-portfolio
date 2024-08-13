@@ -16,6 +16,8 @@ import ProjectDetails, {
   projectDetailsLoader,
 } from './views/projects/ProjectDetails';
 import ProjectsError from './views/projects/ProjectsError';
+import 'swiper/css';
+import 'swiper/css/navigation';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
