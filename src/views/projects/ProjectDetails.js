@@ -2,7 +2,7 @@ import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 import { Navigation } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { PROJECTS_CONFIG } from './config';
+import PROJECTS_CONFIG from './config';
 
 export default function ProjectDetails() {
   const project = useLoaderData();
@@ -12,23 +12,25 @@ export default function ProjectDetails() {
         {project.content ? (
           project.content.map((item, index) => {
             return (
-              <div className="slider-container">
-                <Swiper
-                  key={'swiper-' + index}
-                  modules={[Navigation]}
-                  navigation
-                >
-                  {item ? (
-                    item.map((banner) => {
+              <div key={'swiper-' + index} className="slider-container">
+                <Swiper modules={[Navigation]} navigation>
+                  {item &&
+                    item.banners &&
+                    item.banners.map((banner, innerIndex) => {
                       return (
-                        <SwiperSlide key={'swiper-slide-' + index}>
-                          <img src={banner} />
+                        <SwiperSlide
+                          zoom={true}
+                          key={index + '-child-swiper-' + innerIndex}
+                        >
+                          <img
+                            loading="lazy"
+                            src={banner}
+                            width={item.width}
+                            height={item.height}
+                          />
                         </SwiperSlide>
                       );
-                    })
-                  ) : (
-                    <></>
-                  )}
+                    })}
                 </Swiper>
               </div>
             );

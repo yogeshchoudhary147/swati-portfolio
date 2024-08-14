@@ -1,7 +1,7 @@
 import React from 'react';
 import bg from '../../assets/images/bg.jpeg';
 import { NavLink } from 'react-router-dom';
-import { PROJECTS_CONFIG } from './config';
+import PROJECTS_CONFIG from './config';
 
 export const Projects = () => (
   <div style={{ backgroundImage: `url(${bg})` }} className="projects-container">
@@ -18,15 +18,21 @@ export const Projects = () => (
         </p>
       </div>
       {Object.values(PROJECTS_CONFIG).map((project, index) => {
+        const { banner, course, displayName, description } = project;
         return (
           <NavLink key={project.id} className={'project'} to={project.id}>
-            <img src={project.banner} />
+            <img
+              loading="lazy"
+              src={banner.link}
+              width={banner.width}
+              height={banner.height}
+            />
             <div>
-              <span className="course">{project.course}</span>
+              <span className="course">{course}</span>
               <h2 className="name">
-                {index + 1}. {project.displayName}
+                {index + 1}. {displayName}
               </h2>
-              <h2 className="details">{project.description}</h2>
+              <h2 className="details">{description}</h2>
             </div>
           </NavLink>
         );

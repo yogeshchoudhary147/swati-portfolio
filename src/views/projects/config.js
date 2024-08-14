@@ -1,6 +1,6 @@
 //Feastly banners
 
-import feastly_pic from '../../assets/images/feastly/feastly.jpeg';
+import feastly_pic from '../../assets/images/feastly/feastly.jpg';
 import meera_persona from '../../assets/images/feastly/user_personas/meera.png';
 import neel_persona from '../../assets/images/feastly/user_personas/neel.png';
 import vikram_persona from '../../assets/images/feastly/user_personas/vikram.png';
@@ -18,28 +18,42 @@ import challenge from '../../assets/images/feastly/challenge.png';
 import ideas from '../../assets/images/feastly/ideas.png';
 
 //Learnify banners
-import learnify_pic from '../../assets/images/learnify/learnify.jpeg';
+import learnify_pic from '../../assets/images/learnify/learnify.jpg';
 
 //Reflect banners
-import reflect_pic from '../../assets/images/reflect/reflect.jpeg';
+import reflect_pic from '../../assets/images/reflect/reflect.jpg';
 
-export const PROJECTS_CONFIG = [
+export default [
   {
     id: 'feastly',
     displayName: 'Feastly',
     course: 'Google UX Design Project (Coursera)',
     description: 'A comprehensive dining & social app',
-    banner: feastly_pic,
+    banner: {
+      link: feastly_pic,
+      width: 878,
+      height: 670,
+    },
     content: [
-      [challenge],
-      [meera_persona, neel_persona, vikram_persona, zara_persona],
-      [meera_journey, neel_journey, vikram_journey, zara_journey],
-      [research_summary],
-      [what_user_said],
-      [design_solutions],
-      [competitors],
-      [app_flow],
-      [ideas],
+      { banners: [challenge], height: 456, width: 1029 },
+      {
+        banners: [meera_persona, neel_persona, vikram_persona, zara_persona],
+        height: 1120,
+        width: 2058,
+      },
+      ,
+      {
+        banners: [meera_journey, neel_journey, vikram_journey, zara_journey],
+        height: 1302,
+        width: 2058,
+      },
+      ,
+      { banners: [research_summary], height: 972, width: 1029 },
+      { banners: [what_user_said], height: 1044, width: 2058 },
+      { banners: [design_solutions], height: 1302, width: 2058 },
+      { banners: [competitors], height: 3416, width: 2058 },
+      { banners: [app_flow], height: 1968, width: 2058 },
+      { banners: [ideas], height: 997, width: 1042 },
     ],
   },
   {
@@ -47,13 +61,21 @@ export const PROJECTS_CONFIG = [
     displayName: 'Learnify',
     course: 'Google UX Design Project (Coursera)',
     description: 'An online learning website',
-    banner: learnify_pic,
+    banner: {
+      link: learnify_pic,
+      width: 878,
+      height: 670,
+    },
   },
   {
     id: 'reflect',
     displayName: 'Reflect',
     course: 'Google UX Design Project (Coursera)',
     description: 'App & website for daily rituals for a better lifestyle',
-    banner: reflect_pic,
+    banner: {
+      link: reflect_pic,
+      width: 756,
+      height: 566,
+    },
   },
 ];

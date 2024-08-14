@@ -380,14 +380,14 @@ body {
     }
     .project {
       display: flex;
-      justify-content: space-between;
       align-items: center;
       padding: 48px 0px;
       color: #000;
       border-bottom: 1px solid rgb(199, 199, 199);
       gap: 48px;
       img {
-        width: 420px;
+        max-width: 420px;
+        height: auto;
         object-fit: cover;
       }
       .course {
@@ -532,8 +532,9 @@ body {
     .slider-container {
       width: 100%;
       img {
-        width: 100%;
         display: block;
+        width: 100%;
+        height: auto;
       }
     }
     .coming-up-container {
