@@ -17,6 +17,16 @@ export default function ProjectDetails() {
                   {item &&
                     item.banners &&
                     item.banners.map((banner, innerIndex) => {
+                      const dimensions = Object.keys(banner);
+                      const srcset = dimensions.reduce((acc, curr, index) => {
+                        return (
+                          acc +
+                          banner[curr] +
+                          ' ' +
+                          curr +
+                          (index === dimensions.length - 1 ? '' : ', ')
+                        );
+                      }, '');
                       return (
                         <SwiperSlide
                           zoom={true}
@@ -24,7 +34,8 @@ export default function ProjectDetails() {
                         >
                           <img
                             loading="lazy"
-                            src={banner}
+                            srcSet={srcset}
+                            src={banner['1x']}
                             width={item.width}
                             height={item.height}
                           />
