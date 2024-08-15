@@ -40,7 +40,11 @@ export default function ProjectDetails() {
             <h1>Coming Soon!!</h1>
             <br />
             <br />
-            <img width={'100%'} src={project.banner} />
+            <img
+              loading="lazy"
+              src={project.banner.link}
+              alt={project.description}
+            />
             <br />
             <br />
             <h2>{project.displayName}</h2>

@@ -35,6 +35,7 @@
 
 :root {
   --primary: rgb(0, 80, 255);
+  --screen-width: 1024px;
 }
 
 body {
@@ -132,7 +133,7 @@ body {
   }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
   .header {
     padding: 24px 20px;
     .info {
@@ -244,6 +245,7 @@ body {
   .projects-container {
     padding-top: 72px !important;
     .main-container {
+      width: 100% !important;
       .heading {
         padding: 32px 24px !important;
         h1 {
@@ -252,9 +254,10 @@ body {
       }
       .project {
         padding: 32px 0px !important;
-        flex-wrap: wrap;
         gap: 16px !important;
         margin: 0px 24px;
+        flex-direction: column;
+        align-items: start !important;
         img {
           width: 100% !important;
         }
@@ -301,7 +304,7 @@ body {
   background-color: rgb(230, 218, 206);
   .main-container {
     width: 90%;
-    max-width: 768px;
+    max-width: var(--screen-width);
     margin: 0px auto;
     padding-bottom: 64px;
     .heading {
@@ -358,16 +361,16 @@ body {
 
 .projects-container {
   background-repeat: no-repeat;
-  background-size: 100% 464px;
+  background-size: 100% 420px;
   padding-top: 96px;
   .main-container {
-    width: 100%;
-    max-width: 768px;
+    width: 90%;
+    max-width: var(--screen-width);
     margin: 0px auto;
     padding-bottom: 64px;
     background-color: white;
     .heading {
-      padding: 80px 140px 60px 120px;
+      padding: 80px 140px 80px 80px;
       h1 {
         font-family: PoppinsSemibold;
         font-size: 56px;
@@ -384,7 +387,7 @@ body {
       padding: 48px 0px;
       color: #000;
       border-bottom: 1px solid rgb(199, 199, 199);
-      gap: 48px;
+      gap: 80px;
       img {
         max-width: 420px;
         height: auto;
@@ -414,12 +417,12 @@ body {
     height: 100%;
     background-color: rgb(230, 218, 206);
     position: absolute;
-    width: 40%;
+    width: 30%;
     z-index: -1;
   }
   .main-container {
     width: 90%;
-    max-width: 768px;
+    max-width: var(--screen-width);
     margin: 0px auto;
     display: flex;
     padding: 72px 0px 56px 0px;
@@ -504,7 +507,7 @@ body {
 .general-container {
   background: rgb(230, 218, 206);
   .main-container {
-    max-width: 768px;
+    max-width: var(--screen-width);
     margin: 0px auto;
     display: flex;
     flex-direction: column;
@@ -522,7 +525,8 @@ body {
   background-color: rgb(230, 218, 206);
   .main-container {
     background-color: rgb(230, 218, 206);
-    max-width: 768px;
+    max-width: var(--screen-width);
+    width: 90%;
     margin: 0px auto;
     display: flex;
     flex-direction: column;
