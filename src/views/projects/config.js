@@ -1,3 +1,9 @@
+export const SECTION_TYPE = Object.freeze({
+  SLIDESHOW: 0,
+  VIDEO: 1,
+  FULLWIDTH: 2,
+});
+
 //Feastly banners
 
 import feastly_pic from '../../assets/images/feastly/feastly.jpg';
@@ -81,13 +87,20 @@ export default [
     },
     content: [
       {
-        banners: [
-          { '1x': challenge_1x, '1.5x': challenge_2x, '2x': challenge_3x },
-        ],
+        sectionType: SECTION_TYPE.FULLWIDTH,
+        banners: [],
         height: 420,
         width: 1024,
       },
       {
+        sectionType: SECTION_TYPE.SLIDESHOW,
+        banners: [
+          { '1x': challenge_1x, '1.5x': challenge_2x, '2x': challenge_3x },
+        ],
+        aspectRatio: 1024 / 420,
+      },
+      {
+        sectionType: SECTION_TYPE.SLIDESHOW,
         banners: [
           {
             '1x': meera_persona_1x,
@@ -110,11 +123,10 @@ export default [
             '2x': zara_persona_3x,
           },
         ],
-        height: 560,
-        width: 1024,
+        aspectRatio: 1024 / 560,
       },
-      ,
       {
+        sectionType: SECTION_TYPE.SLIDESHOW,
         banners: [
           {
             '1x': meera_journey_1x,
@@ -137,11 +149,10 @@ export default [
             '2x': zara_journey_3x,
           },
         ],
-        height: 560,
-        width: 1024,
+        aspectRatio: 1024 / 560,
       },
-      ,
       {
+        sectionType: SECTION_TYPE.SLIDESHOW,
         banners: [
           {
             '1x': user_research_summary_1x,
@@ -149,10 +160,10 @@ export default [
             '2x': user_research_summary_3x,
           },
         ],
-        height: 750,
-        width: 1024,
+        aspectRatio: 1024 / 750,
       },
       {
+        sectionType: SECTION_TYPE.SLIDESHOW,
         banners: [
           {
             '1x': what_user_said_1x,
@@ -160,10 +171,10 @@ export default [
             '2x': what_user_said_3x,
           },
         ],
-        height: 560,
-        width: 1024,
+        aspectRatio: 1024 / 560,
       },
       {
+        sectionType: SECTION_TYPE.SLIDESHOW,
         banners: [
           {
             '1x': design_solutions_1x,
@@ -171,10 +182,10 @@ export default [
             '2x': design_solutions_3x,
           },
         ],
-        height: 650,
-        width: 1024,
+        aspectRatio: 1024 / 650,
       },
       {
+        sectionType: SECTION_TYPE.SLIDESHOW,
         banners: [
           {
             '1x': competitors_1x,
@@ -182,10 +193,10 @@ export default [
             '2x': competitors_3x,
           },
         ],
-        height: 1700,
-        width: 1024,
+        aspectRatio: 1024 / 1700,
       },
       {
+        sectionType: SECTION_TYPE.SLIDESHOW,
         banners: [
           {
             '1x': app_flow_1x,
@@ -193,10 +204,10 @@ export default [
             '2x': app_flow_3x,
           },
         ],
-        height: 750,
-        width: 1024,
+        aspectRatio: 1024 / 750,
       },
       {
+        sectionType: SECTION_TYPE.SLIDESHOW,
         banners: [
           {
             '1x': ideas_1x,
@@ -204,8 +215,7 @@ export default [
             '2x': ideas_3x,
           },
         ],
-        height: 1000,
-        width: 1024,
+        aspectRatio: 1024 / 1000,
       },
     ],
   },

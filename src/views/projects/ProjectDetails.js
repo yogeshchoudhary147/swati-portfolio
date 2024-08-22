@@ -2,7 +2,8 @@ import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 import { Navigation } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import PROJECTS_CONFIG from './config';
+import PROJECTS_CONFIG, { SECTION_TYPE } from './config';
+import bg from '../../assets/images/feastly/something.png';
 
 export default function ProjectDetails() {
   const project = useLoaderData();
@@ -11,40 +12,58 @@ export default function ProjectDetails() {
       <div className="main-container">
         {project.content ? (
           project.content.map((item, index) => {
-            return (
-              <div key={'swiper-' + index} className="slider-container">
-                <Swiper modules={[Navigation]} navigation>
-                  {item &&
-                    item.banners &&
-                    item.banners.map((banner, innerIndex) => {
-                      const dimensions = Object.keys(banner);
-                      const srcset = dimensions.reduce((acc, curr, index) => {
+            if (item.sectionType === SECTION_TYPE.SLIDESHOW) {
+              return (
+                <div key={'swiper-' + index} className="slider-container">
+                  <Swiper modules={[Navigation]} navigation>
+                    {item &&
+                      item.banners &&
+                      item.banners.map((banner, innerIndex) => {
+                        const dimensions = Object.keys(banner);
+                        const srcset = dimensions.reduce((acc, curr, index) => {
+                          return (
+                            acc +
+                            banner[curr] +
+                            ' ' +
+                            curr +
+                            (index === dimensions.length - 1 ? '' : ', ')
+                          );
+                        }, '');
                         return (
-                          acc +
-                          banner[curr] +
-                          ' ' +
-                          curr +
-                          (index === dimensions.length - 1 ? '' : ', ')
+                          <SwiperSlide
+                            zoom={true}
+                            key={index + '-child-swiper-' + innerIndex}
+                          >
+                            <img
+                              style={{ aspectRatio: item.aspectRatio }}
+                              loading="lazy"
+                              srcSet={srcset}
+                            />
+                          </SwiperSlide>
                         );
-                      }, '');
-                      return (
-                        <SwiperSlide
-                          zoom={true}
-                          key={index + '-child-swiper-' + innerIndex}
-                        >
-                          <img
-                            loading="lazy"
-                            srcSet={srcset}
-                            src={banner['1x']}
-                            width={item.width}
-                            height={item.height}
-                          />
-                        </SwiperSlide>
-                      );
-                    })}
-                </Swiper>
-              </div>
-            );
+                      })}
+                  </Swiper>
+                </div>
+              );
+            } else {
+              return (
+                <div class="full-width-container">
+                  <div>
+                    <div>
+                      <h3>Google UX Design Project (Coursera)</h3>
+                      <h1>
+                        ENHANCING SOCIAL DINING
+                        <br />
+                        EXPERIENCES WITH A FOOD
+                        <br />
+                        SOCIALISING APP : <span>Feastly</span>
+                      </h1>
+                    </div>
+                  </div>
+                  <div style={{ backgroundImage: `url(${bg})` }}></div>
+                </div>
+              );
+            }
           })
         ) : (
           <div className="coming-up-container">
