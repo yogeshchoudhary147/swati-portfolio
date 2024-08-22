@@ -47,7 +47,10 @@ export default function ProjectDetails() {
               );
             } else {
               return (
-                <div class="full-width-container">
+                <div
+                  key={'full-screen-' + index}
+                  className="full-width-container"
+                >
                   <div>
                     <div>
                       <h3>Google UX Design Project (Coursera)</h3>

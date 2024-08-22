@@ -283,6 +283,9 @@ body {
         & > div:first-child {
           padding: 32px 24px !important;
           width: 100%;
+          h1 {
+            font-size: 26px !important;
+          }
         }
         & > div:nth-child(2n) {
           height: 260px;
@@ -568,15 +571,17 @@ body {
         padding: 60px;
         text-align: start;
         align-self: center;
-        font-family: PoppinsSemiBold;
         display: flex;
         justify-content: end;
         box-sizing: border-box;
         h3 {
+          font-family: AvenirLight;
           font-size: 14px;
           font-weight: 400;
+          margin-bottom: 12px;
         }
         h1 {
+          font-family: PoppinsSemiBold;
           font-size: 30px;
           span {
             color: #fbb01d;
