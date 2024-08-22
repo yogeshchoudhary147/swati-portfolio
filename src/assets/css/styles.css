@@ -283,6 +283,7 @@ body {
         & > div:first-child {
           padding: 32px 24px !important;
           width: 100%;
+          justify-content: unset !important;
           h1 {
             font-size: 26px !important;
           }
@@ -568,7 +569,7 @@ body {
         width: 50%;
       }
       & > div:first-child {
-        padding: 60px;
+        padding: 0px 8% 0px 0px;
         text-align: start;
         align-self: center;
         display: flex;
